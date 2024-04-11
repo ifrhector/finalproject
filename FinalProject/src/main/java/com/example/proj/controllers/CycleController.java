@@ -27,22 +27,41 @@ public class CycleController {
 	@Autowired
 	CycleService cycleService;
 	
-	
+	/**
+	 * 
+	 * @return List of school cycles
+	 */
 	@GetMapping(value = "/")
 	public ArrayList<CycleModel> getAllCycles(){
 		return cycleService.getAllCycles();
 	}
 	
+	/**
+	 * 
+	 * @param status options: ACTUAL, CLOSE, NEXT
+	 * @return List of cycles by status
+	 */
 	@GetMapping(path = "/{status}")
-	public CycleModel getCycleByStatus(@PathVariable String status) {
+	public ArrayList<CycleModel> getCycleByStatus(@PathVariable String status) {
 		return cycleService.getCycleByStatus(status);
 	}
 	
+	/**
+	 * 
+	 * @param cycle
+	 * @return new cycle object
+	 */
 	@PostMapping(value = "/", consumes = MediaType.APPLICATION_JSON_VALUE)
 	public JsonResponse addNewCycle(@RequestBody CycleModel cycle) {
 		return cycleService.addCycle(cycle);
 	}
 	
+	/**
+	 * 
+	 * @param request
+	 * @param id
+	 * @return update cycle object if apply, otherwise false
+	 */
 	@PutMapping(path = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<CycleModel> updateCycle(@RequestBody CycleModel request, @PathVariable Long id) {
 		boolean updatedCycle = cycleService.updateById(id, request);
@@ -54,6 +73,11 @@ public class CycleController {
 		}
 	}
 	
+	/**
+	 * Cycle is associated with a campus, then this can`t deleted
+	 * @param id
+	 * @return a response included object, if find it, otherwise false.
+	 */
 	@DeleteMapping(value = "/{id}")
 	public JsonResponse deleteCycle(@PathVariable Long id) {
 		

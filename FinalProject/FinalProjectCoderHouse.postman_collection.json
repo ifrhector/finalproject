@@ -1,0 +1,394 @@
+{
+	"info": {
+		"_postman_id": "5b33086e-d8b6-4b7e-8743-2f65e1dc50dd",
+		"name": "FinalProjectCoderHouse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "584322"
+	},
+	"item": [
+		{
+			"name": "GetCycleByStatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/cycle/CLOSE",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cycle",
+						"CLOSE"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllCycles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/cycle/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cycle",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddCycle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"year\": \"24-25\",\n\t\"dateInit\" : \"2024-08-15\",\n\t\"dateEnd\" : \"2025-07-17\",\n\t\"status\" : \"NEXT\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/cycle/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cycle",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCycle",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/cycle/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cycle",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCycle",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"year\": \"23-24\",\n    \"dateInit\": \"2023-08-15\",\n    \"dateEnd\": \"2024-07-17\",\n    \"status\": \"ACTIVE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/cycle/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cycle",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllCampus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/campus/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"campus",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCampusById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/campus/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"campus",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddCampus",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Campus Satelite\",\n    \"campusKey\": \"SAT001\",\n    \"regDate\" : \"2020-08-01\",\n    \"cycle\" : {\n        \"id\": 3,\n        \"year\": \"23-24\",\n        \"dateInit\": \"2023-08-15\",\n        \"dateEnd\": \"2024-07-17\",\n        \"status\": \"ACTUAL\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/campus/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"campus",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllPeople",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/people/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"people",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPeopleById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/people/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"people",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddPeople",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\" : \"Leonel\",\n    \"lastName\" : \"Vicario\",\n    \"active\" : true,\n    \"peopleType\":{\n        \"id\" : 1,\n        \"description\": \"Administrador\"\n    },\n    \"campus\" : {\n            \"id\": 2,\n            \"name\": \"Campus Centro\",\n            \"campusKey\": \"CEN001\",\n            \"regDate\": \"2020-06-01\",\n            \"cycle\": {\n                \"id\": 3,\n                \"year\": \"23-24\",\n                \"dateInit\": \"2023-08-15\",\n                \"dateEnd\": \"2024-07-17\",\n                \"status\": \"ACTUAL\"\n            }\n        }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/people/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"people",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllStudents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/student/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"student",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetStudentById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/student/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"student",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Gabriel\",\n    \"lastName\": \"Mancera\",\n    \"active\": true,\n    \"groupChar\": \"A\",\n    \"campusLevel\": {\n        \"id\": 2,\n        \"levelName\": \"Primaria\"\n    },\n    \"campusGrade\": {\n        \"id\": 4,\n        \"gradeName\": \"Primero\",\n        \"shortName\": \"1º\"\n    },\n    \"campus\": {\n        \"id\": 1,\n        \"name\": \"Campus Satelite\",\n        \"campusKey\": \"SAT001\",\n        \"regDate\": \"2020-08-01\",\n        \"cycle\": {\n            \"id\": 3,\n            \"year\": \"23-24\",\n            \"dateInit\": \"2023-08-15\",\n            \"dateEnd\": \"2024-07-17\",\n            \"status\": \"ACTUAL\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/student/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"student",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllStudentsActiveByCampus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/student/2/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"student",
+						"2",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteStudent",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/student/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"student",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

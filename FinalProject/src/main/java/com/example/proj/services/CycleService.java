@@ -20,7 +20,7 @@ public class CycleService {
 		return (ArrayList<CycleModel>) cycleRepository.findAll();
 	}
 
-	public CycleModel getCycleByStatus(String status) {
+	public ArrayList<CycleModel> getCycleByStatus(String status) {
 		return cycleRepository.findByStatusCycleModel(status);
 	}
 

@@ -1,5 +1,7 @@
 package com.example.proj.repositories;
 
+import java.util.ArrayList;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -10,5 +12,5 @@ public interface ICycleRepository extends JpaRepository<CycleModel, Long> {
 
 	@Query(value = "SELECT c.* FROM cycles c WHERE c.status = ?1", nativeQuery = true,
 			queryRewriter = MyQueryRewriter.class)
-	CycleModel findByStatusCycleModel(String status);
+	ArrayList<CycleModel> findByStatusCycleModel(String status);
 }
